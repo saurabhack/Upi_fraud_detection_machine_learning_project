@@ -1,0 +1,205 @@
+{
+  "categorical_options": {
+    "transaction_type": [
+      "Bill Payment",
+      "P2M",
+      "P2P",
+      "Recharge"
+    ],
+    "merchant_category": [
+      "Education",
+      "Entertainment",
+      "Food",
+      "Fuel",
+      "Grocery",
+      "Healthcare",
+      "Other",
+      "Shopping",
+      "Transport",
+      "Utilities"
+    ],
+    "transaction_status": [
+      "FAILED",
+      "SUCCESS"
+    ],
+    "sender_age_group": [
+      "18-25",
+      "26-35",
+      "36-45",
+      "46-55",
+      "56+"
+    ],
+    "receiver_age_group": [
+      "18-25",
+      "26-35",
+      "36-45",
+      "46-55",
+      "56+"
+    ],
+    "sender_state": [
+      "Andhra Pradesh",
+      "Delhi",
+      "Gujarat",
+      "Karnataka",
+      "Maharashtra",
+      "Rajasthan",
+      "Tamil Nadu",
+      "Telangana",
+      "Uttar Pradesh",
+      "West Bengal"
+    ],
+    "sender_bank": [
+      "Axis",
+      "HDFC",
+      "ICICI",
+      "IndusInd",
+      "Kotak",
+      "PNB",
+      "SBI",
+      "Yes Bank"
+    ],
+    "receiver_bank": [
+      "Axis",
+      "HDFC",
+      "ICICI",
+      "IndusInd",
+      "Kotak",
+      "PNB",
+      "SBI",
+      "Yes Bank"
+    ],
+    "device_type": [
+      "Android",
+      "Web",
+      "iOS"
+    ],
+    "network_type": [
+      "3G",
+      "4G",
+      "5G",
+      "WiFi"
+    ],
+    "day_of_week": [
+      "Friday",
+      "Monday",
+      "Saturday",
+      "Sunday",
+      "Thursday",
+      "Tuesday",
+      "Wednesday"
+    ]
+  },
+  "metrics": {
+    "xgboost": {
+      "name": "XGBoost",
+      "pr_auc": 0.0018,
+      "roc_auc": 0.4563,
+      "accuracy": 0.791,
+      "fraud_precision": 0.0016,
+      "fraud_recall": 0.1771,
+      "fraud_f1": 0.0032,
+      "confusion_matrix": [
+        [
+          39533,
+          10371
+        ],
+        [
+          79,
+          17
+        ]
+      ]
+    },
+    "logistic_regression": {
+      "name": "Logistic Regression (Balanced)",
+      "pr_auc": 0.0017,
+      "roc_auc": 0.455,
+      "accuracy": 0.5945,
+      "fraud_precision": 0.0018,
+      "fraud_recall": 0.3854,
+      "fraud_f1": 0.0036,
+      "confusion_matrix": [
+        [
+          29689,
+          20215
+        ],
+        [
+          59,
+          37
+        ]
+      ]
+    }
+  },
+  "dataset_stats": {
+    "total_transactions": 250000,
+    "fraud_count": 480,
+    "legit_count": 249520,
+    "fraud_rate_pct": 0.192,
+    "avg_amount_inr": 1311.76,
+    "median_amount_inr": 629.0,
+    "max_amount_inr": 42099.0,
+    "train_size": 200000,
+    "test_size": 50000
+  },
+  "cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "segment_name": "Evening Household (\u20b91.7k)",
+      "txn_count": 62571,
+      "share_pct": 25.03,
+      "median_amount_inr": 1682.0,
+      "mean_amount_inr": 2259.77,
+      "avg_hour": 18.64,
+      "fraud_rate_pct": 0.211,
+      "top_category": "Grocery",
+      "top_bank": "SBI"
+    },
+    {
+      "cluster_id": 1,
+      "segment_name": "Evening Food/Snacks (\u20b9304)",
+      "txn_count": 72618,
+      "share_pct": 29.05,
+      "median_amount_inr": 304.0,
+      "mean_amount_inr": 324.43,
+      "avg_hour": 18.67,
+      "fraud_rate_pct": 0.197,
+      "top_category": "Food",
+      "top_bank": "SBI"
+    },
+    {
+      "cluster_id": 2,
+      "segment_name": "High-Value Payers (\u20b912.2k)",
+      "txn_count": 1805,
+      "share_pct": 0.72,
+      "median_amount_inr": 12258.0,
+      "mean_amount_inr": 13397.2,
+      "avg_hour": 14.77,
+      "fraud_rate_pct": 0.332,
+      "top_category": "Education",
+      "top_bank": "SBI"
+    },
+    {
+      "cluster_id": 3,
+      "segment_name": "Morning Household (\u20b91.7k)",
+      "txn_count": 52945,
+      "share_pct": 21.18,
+      "median_amount_inr": 1668.0,
+      "mean_amount_inr": 2254.98,
+      "avg_hour": 9.94,
+      "fraud_rate_pct": 0.164,
+      "top_category": "Grocery",
+      "top_bank": "SBI"
+    },
+    {
+      "cluster_id": 4,
+      "segment_name": "Morning Micro-Spenders (\u20b9303)",
+      "txn_count": 60061,
+      "share_pct": 24.02,
+      "median_amount_inr": 303.0,
+      "mean_amount_inr": 323.2,
+      "avg_hour": 9.91,
+      "fraud_rate_pct": 0.186,
+      "top_category": "Food",
+      "top_bank": "SBI"
+    }
+  ]
+}
