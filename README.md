@@ -8,3 +8,8 @@ An end-to-end Machine Learning web application (**Scikit-learn + FastAPI + React
 
 
 <img width="1806" height="967" alt="image" src="https://github.com/user-attachments/assets/759640c8-e37a-4e71-8787-7db3d96022be" />
+
+
+After clicking on Analyze fraud segment button 
+
+<img width="1806" height="967" alt="image" src="https://github.com/user-attachments/assets/e271dbdd-c374-4c1f-8ec3-cfbd6fee33ef" />
