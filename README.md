@@ -31,3 +31,20 @@ Indian UPI apps (PhonePe, Paytm, Google Pay) and banks process billions of month
 * **Data Debugging Insight:** Initial supervised fraud modeling proved that the dataset's synthetic `fraud_flag` column contained random noise (PR-AUC ~0.0017), leading to a strategic pivot toward high-signal Unsupervised Spending Segmentation.
 
 ***Why K-Means over DBSCAN?*** K-Means scales cleanly to 2.5 lakh rows in seconds and supports live .predict() calls in production, whereas DBSCAN lacks a .predict() method and treats rare high-value ₹12,258 payers as noise.
+
+# How to run locally 
+1
+git clone 
+cd upi-customer-segmentation
+
+2
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+3
+cd frontend
+npm install
+npm run dev
+
+***Author*** :- ***Saurabh kamane***
